@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>picture, source 요소</title>
+    </head>
+    <body>
+        <!--srcset, sizes 속성-->
+        <img
+            srcset="
+                /src/assets/logo/netflix@1x.png 1x,
+                /src/assets/logo/netflix@2x.png 2x
+            "
+            src="/src/assets/logo/netflix@1x.png"
+            alt="넷플릭스"
+        />
+        <br />
+        <!--이미지 형식-->
+        <img
+            src="/src/assets/logo/netflix@1x.png"
+            srcset="/src/assets/logo/netflix@1x.webp"
+            alt="넷플릭스"
+        />
+        <br />
+        
+        </picture>
+    </body>
+</html>
