@@ -1,0 +1,7 @@
+/* body 요소의 배경색상 지정 */
+body {
+    background-color: yellow;
+    color: rgba(0, 0, 255, 0.5);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* 각 글꼴은 우선순위대로 적용되며, 앞에 있는 글꼴이 없으면 다음 글꼴이 적용 */
+}
