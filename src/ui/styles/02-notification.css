@@ -1,5 +1,11 @@
 @import '/src/common/mini-reset.css';
 
+:root {
+    /*색상*/
+    /*여백*/
+    /*글자크기*/
+}
+
 body {
     margin: 50px;
 }
@@ -8,6 +14,39 @@ h1 {
     margin-bottom: 50px;
 }
 
+/* 알림 내용 */
 .notification {
-    background-color: yellow;
+    position: relative;
+    border: 1px solid #929b90;
+    border-radius: 10px;
+    background: no-repeat 1.25rem 50%;
+    padding: 1.25rem 1.25rem 1.25rem 4.375rem;
+
+    /* 제목 */
+    .notification-subject {
+        font-size: 1.125rem;
+    }
+
+    /* 시간 */
+    .notification-time {
+        font-size: 0.75rem;
+        color: greem;
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+    }
+
+    /* 텍스트 컨텐츠 */
+    .notification-content {
+        font-size: 0.875rem;
+        margin-top: 0.625rem;
+    }
+
+    &.green {
+        background-image: url(/src/assets/svg/pot.svg);
+        .notification-subject,
+        notification-time {
+            color: #22be61;
+        }
+    }
 }
