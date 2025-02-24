@@ -1,0 +1,19 @@
+/* 전역 변수 정의 */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+}
+
+.container {
+    --secondary-color: #c76e9a;
+}
+
+/* 잘못된 사용된 예제 */
+/* h1 {
+    background-color: --secondary-color;
+} */
+
+/* 잘 사용된 예제 */
+h1 {
+    background-color: var(--secondary-color);
+}
