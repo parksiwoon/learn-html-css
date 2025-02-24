@@ -1,26 +1,58 @@
 /* 전역 변수 정의 */
-:root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
+@property --text-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: orange;
+}
 
+:root {
+    /*색상 팔레트*/
     --white: #fff;
     --black: #000;
     --red: #f00;
     --green: #0f0;
     --blue: #00f;
+    --orange: orange;
+    --yellow: yellow;
+    --light-blue: aqua;
+
+    /*주요 색상*/
+    --primary-color: var(--orange);
+    --secondary-color: var(--light-blue);
+    --accent-color: var(--yellow);
+    --border-color: var(--red);
 
     /*size*/
     --small: 0.75rem;
     --medium: 0.875rem;
     --dafault: 1rem;
     --large: 1.125rem;
+
+    --text12: 0.75rem;
+}
+
+.container {
+    --text-color: var(--orange);
+    color: var(--text-color);
+
+    .parent {
+        --text-color: blue;
+
+        .child {
+            color: var(--text-color);
+        }
+    }
 }
 
 .wrapper {
+    --font-size: var(--small);
+    --bg-color: var(--green);
+    --text-color: var(--red);
+
     button {
         font-size: var(--font-size, 1rem);
         background-color: var(--bg-color, #fff);
-        color: var(--text-color, #000);
+        color: var(--primary-color, #000);
     }
 
     button.open {
