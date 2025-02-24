@@ -2,10 +2,53 @@
 :root {
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
+
+    --white: #fff;
+    --black: #000;
+    --red: #f00;
+    --green: #0f0;
+    --blue: #00f;
+
+    /*size*/
+    --small: 0.75rem;
+    --medium: 0.875rem;
+    --dafault: 1rem;
+    --large: 1.125rem;
 }
 
-.container {
-    --secondary-color: #c76e9a;
+.wrapper {
+    button.open {
+        --font-size: var(--small);
+        font-size: var(--font-size);
+    }
+    button.close {
+        --font-size: var(--medium);
+        font-size: var(--font-size);
+    }
+    button.popup {
+        --font-size: var(--dafault);
+        font-size: var(--font-size);
+    }
+    button.info {
+        --font-size: var(--large);
+        font-size: var(--font-size);
+    }
+}
+
+.text-card-1 {
+    /*지역 변수 정의*/
+    --bg-color: var(--green);
+    --border-color: var(--red);
+
+    h1 {
+        background-color: var(--bg--color);
+    }
+}
+
+.text-card-2 {
+    /*지역 변수 정의*/
+    --bg-color: var(--green);
+    --border-color: var(--red);
 }
 
 /* 잘못된 사용된 예제 */
@@ -14,6 +57,11 @@
 } */
 
 /* 잘 사용된 예제 */
+/* --secondary-color 속성이 없을 때 대안으로 #2ecc71가 적용되도록 설정 */
 h1 {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color, #2ecc71);
+}
+
+p {
+    background-color: var(--primary-color);
 }
