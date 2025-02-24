@@ -17,21 +17,28 @@
 }
 
 .wrapper {
+    button {
+        font-size: var(--font-size, 1rem);
+        background-color: var(--bg-color, #fff);
+        color: var(--text-color, #000);
+    }
+
     button.open {
         --font-size: var(--small);
-        font-size: var(--font-size);
+        --bg-color: var(--green);
+        --text-color: var(--red);
     }
+
     button.close {
-        --font-size: var(--medium);
-        font-size: var(--font-size);
+        --font-size: var(--default);
     }
+
     button.popup {
-        --font-size: var(--dafault);
-        font-size: var(--font-size);
+        --text-color: var(--blue);
     }
+
     button.info {
-        --font-size: var(--large);
-        font-size: var(--font-size);
+        --bg-color: var(--white);
     }
 }
 
