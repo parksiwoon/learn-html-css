@@ -41,14 +41,29 @@
     --border-color: var(--red);
 
     h1 {
-        background-color: var(--bg--color);
+        background-color: var(--bg-color);
+    }
+    p {
+        border-width: 10px;
+        border-style: solid;
+        border-color: var(--border-color);
     }
 }
 
 .text-card-2 {
-    /*지역 변수 정의*/
-    --bg-color: var(--green);
-    --border-color: var(--red);
+    /* 지역 변수 정의 */
+    --bg-color: var(--blue);
+    --border-color: var(--green);
+
+    h1 {
+        background-color: var(--bg-color);
+    }
+
+    p {
+        border-width: 10px;
+        border-style: solid;
+        border-color: var(--border-color);
+    }
 }
 
 /* 잘못된 사용된 예제 */
@@ -58,10 +73,10 @@
 
 /* 잘 사용된 예제 */
 /* --secondary-color 속성이 없을 때 대안으로 #2ecc71가 적용되도록 설정 */
-h1 {
+/* h1 {
     background-color: var(--primary-color, #2ecc71);
 }
 
 p {
     background-color: var(--primary-color);
-}
+} */
