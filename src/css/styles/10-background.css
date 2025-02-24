@@ -6,7 +6,18 @@ body {
     /*배경 이미지 반복 여부 (반복 안함)*/
     background-repeat: no-repeat;
     /*배경 이미지 위치*/
-    background-position: 30px 40px;
+    background-position: 50% 0;
     /* background-position-x: 30px;
     background-position-y: 40px; */
+    /*body 요소의 최소 높이*/
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: contain;
+
+    /*단축 표기법으로 줄여서 선언*/
+    background:
+        url(/src/assets/images/cloud.png) no-repeat 0 100px fixed,
+        url(/src/assets/images/sun.png) no-repeat 100px 50px fixed,
+        linear-gradient(red, green),
+        pink;
 }
