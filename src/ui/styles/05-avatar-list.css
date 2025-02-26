@@ -1,1 +1,27 @@
 @import '/src/ui/components/avatar/avatar.css';
+
+.case-01 {
+    background-color: yellow;
+    margin: 20px;
+    border: 2px soloid red;
+    border-radius: 4px;
+
+    ul {
+        width: 360px;
+        background-color: pink;
+        font-size: 0;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    li {
+        background: lime;
+        display: inline-block;
+        font-size: 1rem;
+        margin: 10px;
+    }
+
+    /* case 02 - float */
+    /* case 03 - flex */
+    /* case 04 - grid */
+}

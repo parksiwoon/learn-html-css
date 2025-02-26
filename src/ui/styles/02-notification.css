@@ -30,7 +30,7 @@ h1 {
     /* 시간 */
     .notification-time {
         font-size: 0.75rem;
-        color: greem;
+        color: green;
         position: absolute;
         top: 1.25rem;
         right: 1.25rem;
