@@ -5,16 +5,21 @@
 /* 헤더 */
 .header {
     background: var(--pastel-coral);
-    height: 15vh;
+    height: 10vh;
+}
+
+/*내비게이션, 메인 콘텐츠, 사이드바 컨테이너*/
+.nav-main-aside-wrapper {
+    border: 5px solid red;
 }
 
 /* 내비게이션 */
 .navigation {
     background: var(--pastel-green);
-    height: 20vh;
+    height: 15vh;
 }
 
-/*메인 콘텐츠 및 사이드바 컨테이너*/
+/* 메인 콘텐츠 및 사이드바 컨테이너 */
 .content-wrapper {
     @media (min-width: 768px) {
         display: flow-root;
@@ -36,11 +41,11 @@
 /* 사이드 바 */
 .sidebar {
     background: var(--pastel-yellow);
-    height: 20vh;
+    height: 25vh;
 
     @media (min-width: 768px) {
-        width: 50%;
         height: 65vh;
+        width: 50%;
         float: left;
     }
 }
@@ -48,5 +53,5 @@
 /* 푸터 */
 .footer {
     background: var(--pastel-lavender);
-    height: 15vh;
+    height: 10vh;
 }
