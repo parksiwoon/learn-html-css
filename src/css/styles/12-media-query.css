@@ -1,20 +1,27 @@
 @import '/src/common/best-reset.css';
 @import '/src/common/a11y.css';
 
-/*기본적으로 적용될 배경색-blue*/
+/* 모든 디바이스에 기본적으로 적용될 배경색 - yellow */
+/* 모든 디바이스에 글자크기를 유연하게 설정 - vw 단위 */
+/* clamp() 함수를 이용해서 글자크기를 유연하게 설정 가능 */
 body {
     background: yellow;
-    font-size: 1.5rem;
+    font-size: clamp(0.75rem, 2vw, 2rem);
 
-    /*뷰포트 (600px) 크기에 따라 적용될 배경색 - pink*/
-    @media (min-width: 600px) {
+    /* 뷰포트(600px) 크기에 따라 적용될 배경색 - pink */
+    @media (min-width: 600px) and (max-width: 800px) {
         background: pink;
-        font-size: 2rem;
     }
 
-    /*뷰포트 (1000px) 크기에 따라 적용될 배경색 - lime*/
+    /* 뷰포트(1200px) 크기에 따라 적용될 배경색 - pink */
     @media (min-width: 1000px) {
         background: lime;
-        font-size: 2.5rem;
     }
 }
+
+/* 가로 보기모드에서 적용될 배경색 - orange */
+/* @media (orientation: landscape) {
+  body{
+    background-color: orange;
+  }
+} */
