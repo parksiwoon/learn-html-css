@@ -1,0 +1,30 @@
+@import '/src/common/best-reset.css';
+@import '/src/common/theme.css';
+
+/* 테이블 스타일링 */
+.table-wrapper {
+    margin-inline: 20px;
+    margin-block: 40px;
+    background: var(--pastel-yellow);
+}
+
+.table-styling {
+    border: 1px solid currentColor;
+    inline-size: 100%;
+
+    .number {
+        inline-size: 10%;
+    }
+
+    .name {
+        inline-size: 20%;
+    }
+
+    .email {
+        inline-size: 40%;
+    }
+
+    .phone {
+        inline-size: 30%;
+    }
+}
