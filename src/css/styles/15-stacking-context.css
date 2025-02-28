@@ -17,15 +17,22 @@ h1 {
     display: flex;
     flex-flow: row nowrap;
 
-    button {
+    .button-avatar {
         margin-right: -20px;
         position: static;
+        transition: rotate 2000ms;
+        /* filter: blur(5px); */
 
         &:hover,
         &:focus {
-            /* 아바타의 겹치는 순서를 제어하기 위해 0보다 큰 값 지정 */
+            /* 아바타의 겹치는 순서를 제어하기 위해 0보다 큰 값 지정 */
+            /* position이 static이 아닐 경우 가능 (z-index) */
             z-index: 10;
-            transform: scale(1.5);
+            transform: scale(1.5) translate(0, -20px);
+            /* opacity: 0.8; */
+            /* translate:0 -20px; */
+            rotate: -3turn;
+            filter: sepia(60%);
         }
 
         &::after {
@@ -34,8 +41,8 @@ h1 {
     }
 }
 
-/*Transition*/
-/*Case 2*/
+/* Transition */
+/* case 2 */
 .case-02 {
     margin-block-start: 20px;
     display: flex;
@@ -48,14 +55,20 @@ h1 {
         text-align: center;
         align-content: center;
         background: var(--pastel-lavender);
-        transition-property: background, border-radius;
-        transition-duration: 1s, 0.5s;
-        transition-delay: 0s, 2s;
-        transition-timing-function: ease;
+        /* transition-property: background, border-radius;
+    transition-duration: 2s, 1s;
+    transition-delay: 0s, 2s;
+    transition-timing-function: ease; */
+        /* transition 관련 단축 속성 */
+        /* transition: 
+              background 2s 0s ease, 
+              border-raius 1s 2s ease; */
+        transition: all 200ms;
 
         &:hover {
             background: var(--pastel-orange);
             border-radius: 50%;
+            rotate: 2turn;
         }
     }
 }
