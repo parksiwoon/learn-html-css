@@ -1,0 +1,40 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/login-theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+/*체크박스(배경이미지)*/
+.checkbox {
+    --size: 1.5rem;
+
+    display: inline-flex;
+    height: var(--size);
+    block-size: var(--size);
+    position: relative;
+
+    input {
+        position: absolute;
+        top: 0;
+        inset-block-start: 0;
+        left: 0;
+        inset-inline-start: 0;
+        margin: 0;
+
+        width: var(--size);
+        inline-size: var(--size);
+        height: var(--size);
+        block-size: var(--size);
+        appearance: none;
+    }
+
+    label {
+        background: pink url(/src/assets/naver/unchecked.svg) no-repeat;
+        padding-left: 1.875rem;
+        padding-inline-start: 1.875rem;
+        align-content: center;
+    }
+
+    input:checked + label {
+        background-image: url(/src/assets/naver/checked.svg);
+    }
+}
