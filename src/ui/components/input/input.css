@@ -28,5 +28,14 @@ form {
         left: 0;
         inset-inline-start: 0;
         translate: 0 150%;
+        display: none;
+    }
+
+    input:placeholder-shown + p {
+        display: none !important;
+    }
+
+    input:user-invalid + p {
+        display: block;
     }
 }
