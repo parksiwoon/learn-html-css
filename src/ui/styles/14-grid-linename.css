@@ -33,18 +33,34 @@
     min-height: 100vh;
     min-block-size: 100vh;
     display: grid;
-    grid-template-columns: [full-start] 1fr [content-start like-start] 8fr [content-end] 1fr [full-end like-end];
-    gird-template-rows: 1fr 1fr 8fr 1fr 1fr;
+    grid-template-columns:
+        [full-start] minmax(1rem, 1fr)
+        [content-start] repeat(12, minmax(5.3125rem, 1fr))
+        [content-end] minmax(1rem, 1fr)
+        [full-end];
 
     /*크기가 작은 아이템이 먼저 배치된 후, 나중에 추가되는 아이템이 빈 공간을 메우려고 시도*/
     grid-auto-flow: dense;
 
     .header {
-        grid-column: full-start / full-end;
+        grid-column: content;
     }
 
     .navigation {
         grid-column: full;
+        display: grid;
+        grid-template-columns: subgrid;
+
+        .menu {
+            background: var(--pastel-sky-blue);
+            grid-column: content;
+            display: grid;
+            grid-template-columns: subgrid;
+
+            li {
+                grid-column: span 3;
+            }
+        }
     }
 
     .main {
@@ -54,7 +70,7 @@
     .sidebar {
         /* grid-column: 1/2;
         grid-row: 3/4; */
-        grid-column: like;
+        grid-column: content;
     }
 
     .footer {
