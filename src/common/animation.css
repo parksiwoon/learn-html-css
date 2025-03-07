@@ -1,0 +1,20 @@
+/* Fade Animation */
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*shrink animation*/
+@keyframes shrink {
+    0%,
+    100% {
+        width: 100%;
+    }
+    50% {
+        width: 50%;
+    }
+}
