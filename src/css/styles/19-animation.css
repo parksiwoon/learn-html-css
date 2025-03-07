@@ -201,11 +201,65 @@ body {
 @keyframes glow {
     0%,
     100% {
+        box-shadow: 0 0 5px light-dark(rgb(0 0 0 /0.5), rgb(255 255 255 /0.5));
     }
     50% {
+        box-shadow: 0 0 10px light-dark(rgb(0 0 0 /0.6), rgb(255 255 255 /0.6));
     }
 }
 .case-09 .target-animation {
     animation: glow 2s infinite ease-in-out;
     animation-play-state: paused;
+}
+@property --rotation {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes rotate {
+    from {
+        --rotation: 0deg;
+    }
+    to {
+        --rotation: 360deg;
+    }
+}
+.case-10 .target-animation {
+    width: 150px;
+    aspect-ratio: 1/1;
+    position: relative;
+
+    &::before,
+    &::after {
+        --rotation: 0deg;
+
+        box-sizing: content-box;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 50%;
+        translate: -50% -50%;
+        background: conic-gradient(
+            from var(--rotation),
+            red,
+            orange,
+            yellow,
+            green,
+            blue,
+            darkblue,
+            purple,
+            red
+        );
+        padding: 1px;
+        z-index: -1;
+        border-radius: 8px;
+        animation: rotate 1s infinite linear;
+        animation-play-state: paused;
+    }
+
+    &::before {
+        filter: blur(15px);
+    }
 }
